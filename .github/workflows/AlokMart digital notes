@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>AlokMart Digital Notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f2f2f2;
+}
+
+/* LOGIN */
+#loginBox{
+  max-width:350px;
+  margin:80px auto;
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+#loginBox h2{
+  text-align:center;
+  margin-bottom:15px;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+}
+
+button{
+  width:100%;
+  padding:10px;
+  background:#2874f0;
+  color:white;
+  border:none;
+  border-radius:5px;
+  font-size:16px;
+}
+
+/* WEBSITE */
+#site{
+  display:none;
+}
+
+header{
+  background:#2874f0;
+  color:white;
+  padding:15px;
+  text-align:center;
+}
+
+.card{
+  background:white;
+  margin:15px;
+  padding:15px;
+  border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.price{
+  color:green;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN PAGE -->
+<div id="loginBox">
+  <h2>Login – AlokMart</h2>
+  <input type="text" id="user" placeholder="Username">
+  <input type="password" id="pass" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<!-- WEBSITE PAGE -->
+<div id="site">
+  <header>
+    <h1>📘 AlokMart Digital Notes</h1>
+    <p>Class 6–12</p>
+  </header>
+
+  <div class="card">
+    <h3>Class 6 Maths (Ch 1–2)</h3>
+    <p class="price">FREE</p>
+  </div>
+
+  <div class="card">
+    <h3>Class 10 Science</h3>
+    <p class="price">₹199</p>
+  </div>
+
+  <div class="card">
+    <h3>Full Year Access</h3>
+    <p class="price">₹500</p>
+  </div>
+</div>
+
+<script>
+function login(){
+  var u = document.getElementById("user").value;
+  var p = document.getElementById("pass").value;
+
+  if(u && p){
+    document.getElementById("loginBox").style.display="none";
+    document.getElementById("site").style.display="block";
+  }else{
+    alert("Username aur Password likho");
+  }
+}
+</script>
+
+</body>
+</html>
